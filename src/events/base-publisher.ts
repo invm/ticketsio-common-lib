@@ -6,7 +6,7 @@ interface Event {
   data: any;
 }
 
-export abstract class Publisher<T extends Event> {
+abstract class Publisher<T extends Event> {
   abstract subject: T['subject'];
   protected client: Stan;
 
@@ -26,3 +26,5 @@ export abstract class Publisher<T extends Event> {
     });
   }
 }
+
+export default Publisher;
